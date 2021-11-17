@@ -51,4 +51,6 @@
 (defn main [& args]
   (let [port (get args 1 (os/getenv "PORT" "9001"))
         host (get args 2 "localhost")]
-    (server app port host)))
+    (do
+      (print "Running on " port)
+      (server app port host))))
