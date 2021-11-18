@@ -2,6 +2,7 @@
   :name "raspystatus"
   :description ""
   :dependencies ["https://github.com/joy-framework/joy"
+                 "https://github.com/andrewchambers/janet-sh"
                  "https://github.com/janet-lang/sqlite3"]
   :author ""
   :license ""
@@ -16,5 +17,4 @@
 
 (declare-executable
   :name "app"
-  :entry "main.janet"
-  :lflags ["-static"])
+  :entry "main.janet")

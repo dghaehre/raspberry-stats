@@ -1,4 +1,5 @@
 (use joy)
+(import /raspberry)
 
 
 # Layout
@@ -22,10 +23,10 @@
 
 (defn home [request]
   [:div {:class "tc"}
-   [:h1 "You found joy!"]
+   [:h1 "You found home"]
    [:p {:class "code"}
-    [:b "Joy Version:"]
-    [:span (string " " version)]]
+    [:b "Temprature: "]
+    [:span (raspberry/get_tmp)]]
    [:p {:class "code"}
     [:b "Janet Version:"]
     [:span janet/version]]])
