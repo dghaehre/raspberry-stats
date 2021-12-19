@@ -20,6 +20,7 @@
 
 # Routes
 (route :get "/" :home)
+(route :get "/stats" :stats)
 
 (defn home [request]
   [:div {:class "tc"}
@@ -30,6 +31,9 @@
    [:p {:class "code"}
     [:b "Janet Version:"]
     [:span janet/version]]])
+
+(defn stats [request]
+  (application/json {:tmp (raspberry/get_tmp)}))
 
 
 # Middleware
